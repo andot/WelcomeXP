@@ -47,6 +47,7 @@ export class Login
         this.activeUserName = null;
         this.pendingAuthentication = false;
 
+        lightdm.set_language("zh_CN.UTF-8");
         // Connect LightDM Signals To Handlers
         lightdm.show_prompt?.connect((prompt, type) => {
             this.show_prompt(prompt, type);
