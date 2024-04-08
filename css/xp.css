@@ -95,55 +95,55 @@
     --stripe-height: 2px;
     --center-divider-width: 1px;
     --center-divider-height: 100%;
-    --logo-size: 136px;
-    --logo-text-gap: 16px;
-    --image-button-size: 24px;
+    --logo-size: 272px;
+    --logo-text-gap: 32px;
+    --image-button-size: 48px;
 
     /* Sizes - User Listing */
-    --user-listing-width: 368px;
-    --user-listing-horizontal-gap: 12px;
-    --user-listing-padding: 8px;
-    --profile-picture-size: 48px;
-    --profile-picture-border-radius: 6px;
-    --profile-picture-border-size: 2px;
+    --user-listing-width: 736px;
+    --user-listing-horizontal-gap: 24px;
+    --user-listing-padding: 16px;
+    --profile-picture-size: 96px;
+    --profile-picture-border-radius: 12px;
+    --profile-picture-border-size: 4px;
 
     /* Sizes - Password Entry Group */
-    --password-entry-length: 164px;
-    --password-entry-height: 24px;
-    --password-entry-offset: 6px;
+    --password-entry-length: 328px;
+    --password-entry-height: 48px;
+    --password-entry-offset: 12px;
     --password-top-margin: calc(var(--profile-picture-size) * 0.5);
     --password-left-margin: calc(2 * var(--profile-picture-border-size) + var(--user-listing-horizontal-gap) + var(--profile-picture-size) - var(--password-entry-offset));
-    --password-entry-button-margin: 8px;
+    --password-entry-button-margin: 16px;
 
     /* Sizes - Popup */
-    --popup-border-radius: 8px;
-    --popup-padding: 10px;
-    --popup-border-size: 1px;
-    --popup-arrow-size: 20px;
-    --popop-arrow-position: 4px;
+    --popup-border-radius: 16px;
+    --popup-padding: 20px;
+    --popup-border-size: 2px;
+    --popup-arrow-size: 40px;
+    --popop-arrow-position: 8px;
     --popup-arrow-border-size: calc(var(--popup-arrow-size) + var(--popup-border-size) * 2);
-    --error-popup-gap: 6px;
+    --error-popup-gap: 12px;
     --error-popup-top-margin: calc(var(--password-top-margin) + var(--popup-arrow-border-size) + var(--password-entry-height) + var(--error-popup-gap));
     --error-popup-left-margin: calc(var(--password-left-margin) + var(--password-entry-length) / 2);
 
     /* Sizes - Shutdown Prompt */
-    --shutdown-prompt-width: 320px;
-    --shutdown-prompt-height: 200px;
+    --shutdown-prompt-width: 640px;
+    --shutdown-prompt-height: 400px;
     --shutdown-header-height: 20%;
-    --shutdown-prompt-option-font-size: 12px;
-    --shutdown-option-button-size: 32px;
+    --shutdown-prompt-option-font-size: 24px;
+    --shutdown-option-button-size: 64px;
 
     /* Sizes - Footer Content */
-    --footer-content-margin-side: 24px;
-    --footer-content-margin-top: 20px;
+    --footer-content-margin-side: 48px;
+    --footer-content-margin-top: 40px;
 
     /* Primary Font */
-    --primary-font-family:'Tahoma', Tahoma, sans-serif;
-    --primary-font-size: 18px;
+    --primary-font-family: '思源黑体 CN Regular', 'Tahoma', Tahoma, sans-serif;
+    --primary-font-size: 36px;
     --primary-font-color: white;
 
     /* Message Font (Corner) */
-    --message-font-size: 12px;
+    --message-font-size: 24px;
 }
 
 body
@@ -283,7 +283,7 @@ body
  */
 #userListings > *
 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 #userListings > *:last-child
 {
@@ -333,7 +333,7 @@ body
 #shutdown-options
 {
     height: var(--image-button-size);
-    box-shadow: 2px 2px 0 var(--shadow-color);
+    box-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 #account-message
@@ -347,7 +347,7 @@ body
     width: var(--user-listing-width);
     background: linear-gradient(90deg, white, var(--primary-bg) 80%);
     border-radius: var(--profile-picture-border-radius);
-    padding: 1px;
+    padding: 2px;
 }
 
 .profile-picture-wrapper
@@ -357,13 +357,13 @@ body
     width: var(--profile-picture-size);
     height: var(--profile-picture-size);
     padding: var(--profile-picture-border-size);
-    box-shadow: 1px 1px 2px var(--shadow-color);
+    box-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 .user:hover .profile-picture-wrapper, .user.active .profile-picture-wrapper
 {
     background-color: var(--profile-picture-border-inner);
-    box-shadow: 1px 1px 2px var(--shadow-color), inset 0 0 1px 1px var(--profile-picture-border-outer);
+    box-shadow: 2px 2px 4px var(--shadow-color), inset 0 0 2px 2px var(--profile-picture-border-outer);
 }
 
 .profile-picture
@@ -377,7 +377,7 @@ body
 {
     position: relative;
     background-color: var(--primary-bg);
-    outline: 1px solid var(--primary-bg);
+    outline: 2px solid var(--primary-bg);
     padding: var(--user-listing-padding) 0 var(--user-listing-padding) var(--user-listing-padding);
     display: flex;
     flex-direction: row;
@@ -408,7 +408,7 @@ body
 .user.active
 {
     flex: 1 1 0px;
-    outline: 1px solid transparent;
+    outline: 2px solid transparent;
     border-right: 0;
     border-radius: var(--profile-picture-border-radius);
     border-top-right-radius: 0;
@@ -432,7 +432,7 @@ body
  */
 .password-box > *
 {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 .password-box > *:last-child
 {
@@ -441,11 +441,11 @@ body
 
 .password
 {
-    box-shadow: 2px 2px 0 var(--shadow-color);
+    box-shadow: 4px 4px 0 var(--shadow-color);
     outline: none;
     border: none;
-    padding-left: 8px;
-    border-radius: 5px;
+    padding-left: 16px;
+    border-radius: 10px;
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
@@ -470,7 +470,7 @@ body
  */
 .password-form > *
 {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .password-form > *:last-child
 {
@@ -545,8 +545,8 @@ body
 
 .password-error-title
 {
-    font-family: "Tahoma Bold", "Tahoma", sans-serif;
-    margin-bottom: 4px;
+    font-family: '思源黑体 CN Regular', 'Tahoma Bold', 'Tahoma', sans-serif;
+    margin-bottom: 8px;
 }
 
 .password-error-icon
@@ -577,9 +577,10 @@ body
 
 #welcome
 {
-    font-family: "Franklin Gothic Demi Italic", sans-serif;
-    font-size: 50px;
-    text-shadow: 2px 2px 0 var(--shadow-color);
+    font-family: '思源黑体 CN Italic', "Franklin Gothic Demi Italic", sans-serif;
+    font-size: 100px;
+    font-style: italic;
+    text-shadow: 4px 4px 0 var(--shadow-color);
     margin: auto 0;
 }
 
@@ -622,12 +623,12 @@ body
 
 #shutdown-prompt-header > *:first-child
 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #shutdown-prompt-header > *:last-child
 {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 #logo-small
@@ -662,7 +663,7 @@ body
 }
 .shutdown-prompt-option > *:first-child
 {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .shutdown-prompt-option .img-button
@@ -683,15 +684,15 @@ body
 
 #shutdown-prompt-footer > *:last-child
 {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 #shutdown-cancel-button-outline
 {
     width: min-content;
     height: min-content;
-    padding: 1px;
-    border-radius: 2px;
+    padding: 2px;
+    border-radius: 4px;
     background: linear-gradient(170deg, var(--button-outline-1) 35%,
         var(--button-outline-2));
 }
@@ -700,9 +701,9 @@ body
 {
     width: min-content;
     height: min-content;
-    padding: 1px;
-    border: solid 1px var(--button-border);
-    border-radius: 3px;
+    padding: 2px;
+    border: solid 2px var(--button-border);
+    border-radius: 6px;
     background: linear-gradient(var(--button-normal-border-1),
         var(--button-normal-border-2));
 }
@@ -725,11 +726,13 @@ body
     font-size: var(--shutdown-prompt-option-font-size);
     outline: none;
     border: none;
-    padding: 0px 8px 0px 8px;
+    padding: 0px 16px 0px 16px;
     background: linear-gradient(180deg, var(--button-background-1),
         var(--button-background-2) 90%, var(--button-background-3) 95%);
     /* Disable "sort-of-bold" text shadow hack */
     text-shadow: none;
+    white-space:nowrap;
+    word-break : keep-all;
 }
 
 @keyframes grayFadeIn
